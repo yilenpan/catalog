@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <form method="post">
+    <label>Edit Sport:{{item.name}}</label>
+    <label>Item Name</label>
+    <input type="text" name="name" placeholder='{{item.name}}'><br>
+    <label>Description</label>
+    <textarea name="description" id="" cols="30" rows="10" placeholder='{{item.description}}'></textarea>
+    <input type="submit" value="Submit" class='btn btn-success'>
+  </form>
+</div>
+{% endblock %}

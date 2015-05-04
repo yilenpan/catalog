@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-3">
+    <h3>Sports</h3>
+    <ul>
+    {% for category in categories %}
+      <li><a href="/catalog/{{category.name}}/items">{{category.name}}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="col-xs-8">
+    {{addItem | safe}}
+    <h3>Latest Items</h3>
+    <ul>
+    {% for item in items %}
+      <li><a href="/catalog/{{item.sport.name}}/{{item.name}}">{{item.name}}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
